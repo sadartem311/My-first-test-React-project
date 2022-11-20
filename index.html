@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <dib id="app"></dib>
+    <div id="app"></div>
+    <div id="vanilla-app"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
     <script>
-      const helloWorldHeading = React.createElement(
+      const reactHeading = React.createElement(
         'h1',
         null,
         'Hello world from React'
       )
       const container = document.getElementById('app')
       const root = ReactDOM.createRoot(container)
-      root.render(helloWorldHeading)
+      root.render(reactHeading)
+    </script>
+    <script>
+      const vanillaJSHeading = document.createElement('h1')
+      vanillaJSHeading.textContent = 'hello from vanillajs'
+      document.getElementById('vanilla-app').appendChild(vanillaJSHeading)
     </script>
   </body>
 </html>
